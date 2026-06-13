@@ -87,17 +87,39 @@ nav a:hover{
 }
 
 .hero{
-  height:500px;
-  background:#eee;
+  height:560px;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("imegas24.webp") center/cover no-repeat;
   display:flex;
   align-items:center;
-  justify-content:center;
-  text-align:center;
+  justify-content:flex-start;
+  text-align:left;
+  padding-left:13%;
+  color:#fff;
 }
 
-.hero h1{font-size:70px;line-height:.95;margin-bottom:20px}
-.hero p{font-size:18px;margin-bottom:25px}
-.hero button{padding:16px 35px;background:#000;color:#fff;border:none;font-weight:bold;cursor:pointer}
+.hero h1{
+  font-size:76px;
+  line-height:.95;
+  margin-bottom:22px;
+  font-weight:900;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:28px;
+  font-weight:600;
+}
+
+.hero button{
+  padding:16px 35px;
+  background:#fff;
+  color:#000;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+}
 
 section{width:72%;margin:65px auto}
 .title{font-size:34px;margin-bottom:25px}
@@ -400,7 +422,12 @@ footer{
   section{width:90%}
   .search{padding:15px 5%}
   .grid,.category-grid,.foot{grid-template-columns:repeat(2,1fr)}
-  .hero h1{font-size:45px}
+  .hero{
+    padding:0 6%;
+    text-align:center;
+    justify-content:center;
+  }
+  .hero h1{font-size:48px}
   .cart{width:100%}
 }
 
@@ -446,12 +473,57 @@ footer{
   <button onclick="searchProducts()">검색</button>
 </div>
 
-<div class="hero">
-  <div>
-    <h1>ADIDAS<br>SHOP</h1>
-    <p>신발과 의류를 한 곳에서 만나보세요</p>
-    <button onclick="scrollProducts()">지금 쇼핑하기</button>
+<div class="hero" style="
+height:650px;
+background-image:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url('images/아이콘/imegas24.webp');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+display:flex;
+align-items:center;
+padding-left:13%;
+color:#fff;
+">
+
+  <div style="
+  background:rgba(0,0,0,.25);
+  padding:35px 45px;
+  border-radius:12px;
+  backdrop-filter:blur(3px);
+  ">
+
+    <h1 style="
+    font-size:90px;
+    line-height:.9;
+    margin-bottom:20px;
+    font-weight:900;
+    ">
+      ADIDAS<br>SHOP
+    </h1>
+
+    <p style="
+    font-size:24px;
+    margin-bottom:30px;
+    ">
+      신발과 의류를 한 곳에서 만나보세요
+    </p>
+
+    <button onclick="scrollProducts()" style="
+    padding:18px 40px;
+    background:#fff;
+    color:#000;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    ">
+      지금 쇼핑하기
+    </button>
+
   </div>
+
 </div>
 
 <section>
